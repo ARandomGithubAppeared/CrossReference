@@ -124,6 +124,7 @@ public class CrossReference {
 		System.out.println("doclist <word> : lists all the documents that contain the specified word");
 		System.out.println(
 				"occurswith <word> : list all the words that occur in documents conatining the specified word");
+		System.out.println("quit: quits the program");
 		while (scan.hasNext()) {
 			String curToken = scan.next().trim();
 			if (curToken.equals("wordlist")) {
@@ -134,6 +135,9 @@ public class CrossReference {
 			}
 			if (curToken.equals("occurswith")) {
 				this.occursWith(findWord(scan.next()));
+			}
+			if (curToken.equals("quit")) {
+				System.exit(0);;
 			}
 
 			System.out.println("\n" + "Ready for next command:");
